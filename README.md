@@ -30,11 +30,11 @@ https://github.com/lyannabueno/projeto_calculadora_medias.git
 
 Localize o arquivo `index.html` no diretório do projeto e abra-o em um navegador web.
 
-## Contribuições
+## Contribuições 🫂
 
 Contribuições para melhorar a calculadora de médias são bem-vindas. Se você tem uma sugestão para melhorar este projeto, sinta-se à vontade para criar um fork do repositório, fazer suas alterações e enviar um pull request.
 
-## Contato
+## Contato 📩
 
 Ana Bueno - anabuenogomes@hotmail.com
 
