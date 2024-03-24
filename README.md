@@ -10,8 +10,8 @@ Este projeto é uma calculadora de médias escolares que permite aos usuários c
 
 ## Tecnologias Utilizadas 📚
 
-- **HTML:** Estrutura da página web.
-- **CSS:** Estilização da interface do usuário.
+- **HTML5:** Estrutura da página web.
+- **CSS3:** Estilização da interface do usuário.
 - **JavaScript:** Lógica de cálculo da média e interação com o usuário.
 
 ## Como Usar 🧮
