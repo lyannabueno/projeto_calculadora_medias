@@ -2,11 +2,19 @@
 
 Este projeto é uma calculadora de médias escolares que permite aos usuários calcular a média final de um aluno, baseando-se na quantidade de matérias e nas respectivas notas obtidas, e determina se o aluno está aprovado ou não.
 
+![image](https://github.com/lyannabueno/projeto_calculadora_medias/assets/130186281/faba1879-516a-44a0-be45-89bc9abc1a65)
+
 ## Funcionalidades 🌟
 
 - **Adicionar Matérias e Notas:** Os usuários podem inserir o nome das matérias e as notas obtidas.
+
+![image](https://github.com/lyannabueno/projeto_calculadora_medias/assets/130186281/c5e552f6-6980-4070-808e-6a115e84ce09)
+  
 - **Calcular Média:** A média é calculada automaticamente à medida que novas notas são adicionadas.
+  
 - **Determinar Aprovação:** Com base na média calculada, o sistema informa se o aluno está aprovado, considerando uma média inicialmente digitada para aprovação.
+
+![image](https://github.com/lyannabueno/projeto_calculadora_medias/assets/130186281/775b4e8c-477a-4468-a4b8-9071003eeed7)  
 
 ## Tecnologias Utilizadas 📚
 
