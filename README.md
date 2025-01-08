@@ -1,6 +1,6 @@
 # School Grades Calculator 👩‍🏫
 
-![image](https://github.com/lyannabueno/projeto_calculadora_medias/assets/130186281/faba1879-516a-44a0-be45-89bc9abc1a65)
+![image](https://github.com/user-attachments/assets/5ccbb7af-bbe2-4acc-8dd5-dee346b3dd37)
 
 ## Features 🌟
 
