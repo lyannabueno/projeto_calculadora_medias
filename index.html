@@ -10,21 +10,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
 
 </head>
 <body>
-    <div class="container">
+    <div class="container--modal" id="initial-screen">
+        <label>Digite a nota mínima: </label>
+        <input type="number" id="user-number" min="0" max="100" class="form-control">
+        <button id="start-button" type="submit" class="btn btn-primary">Continuar</button>
+        <p id="alert-message" class="alert">Insira uma nota válida!</p>
+    </div>
+
+    <div class="container d-none" id="main-content">
         <header>
             <img src="./images/logo.png" alt="Capelo e Diploma">
             <h1>Calculadora de médias</h1>
         </header>
     
         <form id="form-atividade">
-            <input type="text" id='nome-atividade' required placeholder="Nome da atividade"/>
-            <input type="number" id='nota-atividade' required placeholder="Nota da atividade" min="0" max="10"/>
-            <button type="submit">Adicionar +</button>
+            <input class="form-control style-margin-input" type="text" id='nome-atividade' required placeholder="Nome da atividade"/>
+            <input class="form-control" type="number" id='nota-atividade' required placeholder="Nota da atividade" min="0" max="100"/>
+            <button class="btn btn-primary style-margin-button" type="submit">Adicionar +</button>
         </form>
         
         <table cellspacing = "0"> <!--tira o pequeno espaço entre as celulas da coluna-->

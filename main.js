@@ -9,12 +9,27 @@ const notas = [];
 const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
 const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
 
-const notaMinima = (parseFloat(prompt('Digite a nota mínima: '))); /* prompt é o input de python, por exemplo*/
+const initialScreen = document.getElementById('initial-screen');
+const mainContent = document.getElementById('main-content');
+const startButton = document.getElementById('start-button');
+const userNumberInput = document.getElementById('user-number');
+const alertMessage = document.getElementById('alert-message');
 
-let linhas = ''; /* ao retirar 'linhas' de dentro da função (e) ela é transformada em uma variável global e, logo, mantém seu estado entre múltiplos submit*/
+startButton.addEventListener('click', () => {
+    const userNumber = parseFloat(userNumberInput.value.trim());
+    if (userNumber) {
+        alertMessage.style.display = 'none';
+        initialScreen.style.display = 'none';
+        mainContent.classList.remove('d-none');
+    } else {
+        alertMessage.style.display = 'block';    
+    }
+});
+
+let linhas = '';
 
 form.addEventListener('submit', function(e) {
-    e.preventDefault(); /* previne o comportamento padrão do evento de submissão do formulário, que é recarregar a página */
+    e.preventDefault();
 
     adicionaLinha();
     atualizaTabela();
@@ -29,33 +44,31 @@ function adicionaLinha() {
         alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`);
     } else {
         atividades.push(inputNomeAtividade.value);
-        notas.push(parseFloat(inputNotaAtividade.value)); /* transforma a string em um número flutuante */
+        notas.push(parseFloat(inputNotaAtividade.value));
 
-        let linha = '<tr>'; /* essas linhas estão criando uma string que representa uma linha de uma tabela HTML */
+        let linha = '<tr>';
         linha += `<td>${inputNomeAtividade.value}</td>`;
         linha += `<td>${inputNotaAtividade.value}</td>`;
-        linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`; 
-        /* ? = se for verdade 
-        : = se for mentira */
+        linha += `<td>${parseFloat(inputNotaAtividade.value) >= parseFloat(userNumberInput.value) ? imgAprovado : imgReprovado}</td>`; 
         linha += '</td>'
 
-        linhas += linha; /* concatena cada 'linha' à 'linhas' */
+        linhas += linha;
     }
 
-    inputNomeAtividade.value = ''; /* os campos voltam a ficar vazios após o submit */
+    inputNomeAtividade.value = '';
     inputNotaAtividade.value = '';
 }
 
 function atualizaTabela() {
-    const corpoTabela = document.querySelector('tbody') /* seleciona o 1º elemento 'tbody' */
-    corpoTabela.innerHTML = linhas; /* substitui todo o conteúdo anterior de 'tbody' pelo atual escrito em 'linha' */
+    const corpoTabela = document.querySelector('tbody')
+    corpoTabela.innerHTML = linhas;
 }
 
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2); /* limita as casas decimais */
-    document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
+    document.getElementById('media-final-resultado').innerHTML = mediaFinal >= parseFloat(userNumberInput.value) ? spanAprovado : spanReprovado;
 }
 
 function calculaMediaFinal() {
