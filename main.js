@@ -6,8 +6,8 @@ const imgReprovado = '<img src="./images/reprovado.png" alt="Emoji decepcionado"
 const atividades = [];
 const notas = [];
 
-const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
-const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
+const spanAprovado = '<span class="resultado aprovado">Approved</span>';
+const spanReprovado = '<span class="resultado reprovado">Disapproved</span>';
 
 const initialScreen = document.getElementById('initial-screen');
 const mainContent = document.getElementById('main-content');
@@ -39,10 +39,12 @@ form.addEventListener('submit', function(e) {
 function adicionaLinha() {
     const inputNomeAtividade = document.getElementById('nome-atividade');
     const inputNotaAtividade = document.getElementById('nota-atividade');
+    const activityMessage = document.getElementById('activity-message'); // Referência ao parágrafo
 
     if (atividades.includes(inputNomeAtividade.value)) {
-        alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`);
+        activityMessage.textContent = `The activity "${inputNomeAtividade.value}" has already been entered.`;
     } else {
+        activityMessage.textContent = '';
         atividades.push(inputNomeAtividade.value);
         notas.push(parseFloat(inputNotaAtividade.value));
 

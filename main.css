@@ -7,7 +7,7 @@
 
 body {
     background-color: #e7e7e7;
-    padding-top: 100px;
+    padding: 100px 0;
 }
 
 .container--modal {
@@ -65,6 +65,7 @@ header h1 {
 form {
     display: flex;
     width: 100%;
+    margin: 50px 0;
 }
 
 .style-margin-input {
@@ -137,13 +138,20 @@ table td img {
         padding: 0 30px;
     }
 
+    label {
+        font-size: 25px;
+    }
+
+    .alert {
+        font-size: 18px;
+    }
+
     header h1 {
         font-size: 25px;
     }
 
     form {
         display: block;
-        margin: 50px 0 70px 0;
     }
 
     .container input.form-control {
@@ -179,7 +187,10 @@ table td img {
 
     form {
         display: block;
-        margin: 50px 0 70px 0;
+    }
+
+    .text-danger {
+        font-size: 18px;
     }
 
     .container input.form-control {
@@ -210,8 +221,10 @@ table td img {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    form {
-        margin: 40px 0 60px 0;
+
+    .text-danger {
+        margin-bottom: 25px;
+        font-size: 20px;
     }
 
     .container {
@@ -250,8 +263,10 @@ table td img {
 }
 
 @media (min-width: 1279px) {
-    form {
-        margin: 50px 0 70px 0;
+
+    .text-danger {
+        font-size: 22px;
+        margin-bottom: 25px;
     }
 
     header h1 {
