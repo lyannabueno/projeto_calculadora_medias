@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="=X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de médias</title>
+    <title>Grade Calculator</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,30 +16,30 @@
 </head>
 <body>
     <div class="container--modal" id="initial-screen">
-        <label>Digite a nota mínima: </label>
+        <label>Enter the minimum grade: </label>
         <input type="number" id="user-number" min="0" max="100" class="form-control">
-        <button id="start-button" type="submit" class="btn btn-primary">Continuar</button>
-        <p id="alert-message" class="alert">Insira uma nota válida!</p>
+        <button id="start-button" type="submit" class="btn btn-primary">Continue</button>
+        <p id="alert-message" class="alert">Please enter a valid grade!</p>
     </div>
 
     <div class="container d-none" id="main-content">
         <header>
-            <img src="./images/logo.png" alt="Capelo e Diploma">
-            <h1>Calculadora de médias</h1>
+            <img src="./images/logo.png" alt="Cap and Diploma">
+            <h1>Grade Calculator</h1>
         </header>
     
         <form id="form-atividade">
-            <input class="form-control style-margin-input" type="text" id='nome-atividade' required placeholder="Nome da atividade"/>
-            <input class="form-control" type="number" id='nota-atividade' required placeholder="Nota da atividade" min="0" max="100"/>
-            <button class="btn btn-primary style-margin-button" type="submit">Adicionar +</button>
+            <input class="form-control style-margin-input" type="text" id='nome-atividade' required placeholder="Activity Name"/>
+            <input class="form-control" type="number" id='nota-atividade' required placeholder="Activity Grade" min="0" max="100"/>
+            <button class="btn btn-primary style-margin-button" type="submit">Add +</button>
         </form>
         
-        <table cellspacing = "0"> <!--tira o pequeno espaço entre as celulas da coluna-->
+        <table cellspacing = "0"> <!--removes the small space between the table cells-->
             <thead>
                 <tr>
-                    <th>Nome da atividade</th>
-                    <th>Nota da atividade</th>
-                    <th>Aprovado?</th>
+                    <th>Activity Name</th>
+                    <th>Activity Grade</th>
+                    <th>Passed?</th>
                 </tr>
             </thead>
     
@@ -48,7 +48,7 @@
             
             <tfoot>
                 <tr>
-                    <td>Média final</td>
+                    <td>Final Grade</td>
                     <td id = 'media-final-valor'>---</td>
                     <td id = 'media-final-resultado'>---</td>
                 </tr>
